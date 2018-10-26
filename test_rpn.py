@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import unittest
 import rpn
 
@@ -8,3 +9,10 @@ class TestBasics(unittest.TestCase):
     def test_sub(self):
         result = rpn.calculate('4 3 -')
         self.assertEqual(result,1)
+    def test_mul(self):
+        result = rpn.calculate('4 3 *')
+        self.assertEqual(result,12)
+    def test_div(self):
+        result = rpn.calculate('9 3 /')
+        self.assertEqual(result,3)
+
