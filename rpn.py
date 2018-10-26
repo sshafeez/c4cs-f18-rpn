@@ -16,6 +16,7 @@ def calculate(arg):
             return stack[0]
 def main():
     while True:
-        calculate(input('rpn calc>'))
+        result = calculate(input('rpn calc>'))
+        print(result)
 if __name__ == '__main__':
     main()
