@@ -7,20 +7,19 @@ op = {
     '/': operator.floordiv
 }
 def calculate(arg):
-    pass
-    stack = []
-    tokens = arg.split()
-    for token in tokens:
+    stack = arg.split()
+    while len(stack) > 1:
+        token = stack.pop()
         try:
             value = int(token)
             stack.append(value)
         except ValueError:
-            val2 = stack.pop()
-            val1 = stack.pop()
+            val2 = int(stack.pop())
+            val1 = int(stack.pop())
             func = op[token]
             result = func(val1,val2)
-            stack.append(result)
-            return stack[0]
+            stack.append(str(result))
+    return int(stack[0])
 def main():
     while True:
         result = calculate(input('rpn calc>'))
