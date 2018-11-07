@@ -18,6 +18,8 @@ def calculate(myarg, y):
     for token in myarg.split():
         try:
             token = int(token)
+            if (token == "impossibletoken"):
+                print("impossible")
             stack.append(token)
         except ValueError:
             function = operators[token]
@@ -27,6 +29,7 @@ def calculate(myarg, y):
             stack.append(result)
             y.append(result)
         #print(stack)
+    
     if len(stack) != 1:
         raise TypeError("Too many parameters")
     return stack.pop()
