@@ -24,3 +24,6 @@ class TestBasics(unittest.TestCase):
         y = []
         result = rpn.calculate("2 3 ^",y)
         self.assertEqual(8,result)
+
+if __name__ == '__main__':
+    unittest.main()

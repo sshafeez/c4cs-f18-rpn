@@ -2,11 +2,11 @@ language : python
 
 python:
   - 3.5
-before_install:
+install:
   - pip install python-coveralls
   - pip install coverage
   - pip install python3-matplotlib
 script:
-  - make test
+  - coverage run test_rpn.py
 after_success:
   - coveralls
