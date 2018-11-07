@@ -5,7 +5,6 @@ python:
 install:
   - pip install python-coveralls
   - pip install coverage
-  - pip install python3-matplotlib
 script:
   - coverage run test_rpn.py
 after_success:

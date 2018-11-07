@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 
 import operator
-import matplotlib
-matplotlib.use('Agg')
-import matplotlib.pyplot as plt
+#import matplotlib
+#matplotlib.use('Agg')
+#import matplotlib.pyplot as plt
 
 operators = {
     '+': operator.add,
@@ -37,7 +37,7 @@ def main():
     result = calculate(input("rpn calc> "),y)
     print("Result: ", result)
     print(y)
-    plt.plot(y)
-    plt.savefig('graph.png')
+ #   plt.plot(y)
+  #  plt.savefig('graph.png')
 if __name__ == '__main__':
     main()
